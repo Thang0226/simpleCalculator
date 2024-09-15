@@ -1,7 +1,7 @@
-let num1;
-let num2;
-let result;
-let operator;
+let num1 = NaN;
+let num2 = NaN;
+let result = NaN;
+let operator = NaN;
 const bar = document.getElementById("input");
 
 function zero() {
@@ -36,20 +36,48 @@ function nine() {
 }
 
 function add() {
-  operator = "+";
+  if (isNaN(num1)) {
+    num1 = +bar.value;
+    bar.value = "";
+    operator = "+";
+  } else {
+    operator = "+";
+    bar.value = "";
+  }
 }
 function subtract() {
-  operator = "-";
+  if (isNaN(num1)) {
+    num1 = +bar.value;
+    bar.value = "";
+    operator = "-";
+  } else {
+    operator = "-";
+    bar.value = "";
+  }
 }
 function multiply() {
-  operator = "*";
+  if (isNaN(num1)) {
+    num1 = +bar.value;
+    bar.value = "";
+    operator = "*";
+  } else {
+    operator = "*";
+    bar.value = "";
+  }
 }
 function divide() {
-  operator = "/";
+  if (isNaN(num1)) {
+    num1 = +bar.value;
+    bar.value = "";
+    operator = "/";
+  } else {
+    operator = "/";
+    bar.value = "";
+  }
 }
 
-function cal(a, b, op) {
-  switch (op) {
+function cal(a, b, operator) {
+  switch (operator) {
     case "+":
       return a + b;
     case "-":
@@ -62,9 +90,13 @@ function cal(a, b, op) {
 }
 
 function calculate() {
-  bar.value = "";
+  num2 = +bar.value;
+  result = cal(num1, num2, operator);
+  bar.value = result;
+  num1 = result;
 }
 
 function del() {
   bar.value = "";
+  num1 = num2 = result = operator = NaN;
 }
