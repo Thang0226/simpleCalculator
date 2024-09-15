@@ -38,42 +38,30 @@ function nine() {
 function add() {
   if (isNaN(num1)) {
     num1 = +bar.value;
-    bar.value = "";
-    operator = "+";
-  } else {
-    operator = "+";
-    bar.value = "";
   }
+  operator = "+";
+  bar.value = "";
 }
 function subtract() {
   if (isNaN(num1)) {
     num1 = +bar.value;
-    bar.value = "";
-    operator = "-";
-  } else {
-    operator = "-";
-    bar.value = "";
   }
+  operator = "-";
+  bar.value = "";
 }
 function multiply() {
   if (isNaN(num1)) {
     num1 = +bar.value;
-    bar.value = "";
-    operator = "*";
-  } else {
-    operator = "*";
-    bar.value = "";
   }
+  operator = "*";
+  bar.value = "";
 }
 function divide() {
   if (isNaN(num1)) {
     num1 = +bar.value;
-    bar.value = "";
-    operator = "/";
-  } else {
-    operator = "/";
-    bar.value = "";
   }
+  operator = "/";
+  bar.value = "";
 }
 
 function cal(a, b, operator) {
