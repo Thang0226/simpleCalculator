@@ -1,5 +1,12 @@
 let result = NaN;
 const bar = document.getElementById("input");
+// nhan vao 1 số:
+// lay du lieu tu o input
+// noi them chuoi vao
+// ham co tham so
+function pressButton(key) {
+  bar.value += key;
+}
 
 function zero() {
   bar.value += "0";
